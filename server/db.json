@@ -1,0 +1,14 @@
+{
+  "products": [
+    { "id": 1, "title": "Laptop Pro", "price": 1200, "category": "Electronics" },
+    { "id": 2, "title": "Phone Max", "price": 900, "category": "Electronics" },
+    { "id": 3, "title": "Running Shoes", "price": 150, "category": "Sports" },
+    { "id": 4, "title": "Gaming Keyboard", "price": 200, "category": "Electronics" },
+    { "id": 5, "title": "Office Chair", "price": 300, "category": "Furniture" },
+    { "id": 6, "title": "Desk Lamp", "price": 50, "category": "Furniture" },
+    { "id": 7, "title": "Smart Watch", "price": 400, "category": "Electronics" },
+    { "id": 8, "title": "Tennis Racket", "price": 120, "category": "Sports" },
+    { "id": 9, "title": "Backpack", "price": 80, "category": "Accessories" },
+    { "id": 10, "title": "Headphones", "price": 250, "category": "Electronics" }
+  ]
+}

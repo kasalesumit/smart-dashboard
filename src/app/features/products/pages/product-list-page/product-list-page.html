@@ -1,0 +1,15 @@
+<h2>Products</h2>
+<app-form-array></app-form-array>
+@if (loaderService.isLoading()) {
+    <div class="loader">
+        Loading...
+    </div>
+}
+
+<div style="margin-top: 50px;">
+    @for (product of products$ | async; track product.id) {
+        <div>
+            {{ product.title }} - {{ product.price }}
+        </div>
+    }
+</div>

@@ -1,0 +1,38 @@
+<form [formGroup]="myForm">
+    <div>
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" formControlName="firstName">
+        </div> 
+        @if (allControls['firstName'].touched && allControls['firstName'].errors) {
+            @if (allControls['firstName'].errors['required']) {
+                <div>
+                    First Name is required
+                </div>
+            }
+            @if (allControls['firstName'].errors['maxlength']) {
+                <div>
+                   Max length is 3
+                </div>
+            }            
+        } 
+        @if (allControls['firstName'].errors?.['numberNotAllowed']) {
+            <div>No numbers allowed</div>
+        }      
+    </div>
+    <div formArrayName="skills">
+        @for (skill of skills.controls; track $index; let i = $index) {
+            <div [formGroupName]="i">
+                <label for="skills">Skills</label>
+                <input type="text" formControlName="skill">
+            </div>
+            @if (skill.get('skill')?.touched &&
+                    skill.get('skill')?.errors) {
+                This field is required
+            }
+        }
+    </div>
+    <div>
+        <button (click)="addSkill()">Add Skill</button>
+    </div>
+</form>
